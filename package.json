@@ -2,7 +2,7 @@
   "name": "faas-node-functions",
   "version": "0.0.1",
   "description": "Skeleton for NodeJS functions as a service built on FaaS",
-  "main": "index.js",
+  "main": "function.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
