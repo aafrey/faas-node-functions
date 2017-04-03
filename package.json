@@ -1,0 +1,14 @@
+{
+  "name": "faas-node-functions",
+  "version": "0.0.1",
+  "description": "Skeleton for NodeJS functions as a service built on FaaS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Austin Frey",
+  "license": "ISC",
+  "dependencies": {
+    "get-stdin": "^5.0.1"
+  }
+}
