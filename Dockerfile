@@ -1,13 +1,9 @@
-FROM aafrey/fwatchdog:latest
-ARG repo
-
-RUN apk add --no-cache nodejs
-RUN apk add --no-cache --virtual .build-dependencies git
-
-RUN git clone $repo . && \
-    npm install get-stdin && \
-    npm install
+FROM aafrey/func-builder:latest
+# NodeJS index.json and get-stdin already built-in
+# Add the function.js and package.json
+ADD . /function
+RUN npm install
 
 RUN apk del .build-dependencies
-ENV fprocess="node function.js"
+ENV fprocess="node ./function/index.js"
 CMD ["fwatchdog"]
